@@ -34,23 +34,35 @@
             and our launch deals.
           </p>
           <div class="form-wrap">
-            <form id="emailForm">
+            <!-- <div class="subscribe">
+              <input type="email" id="email" placeholder="Email adress">
+              <img src="images/icon-error.svg" alt="icon-error" id="icon-error">
+              <button type="submit" class="button" onclick="validarEmail()">
+                <img src="images/icon-arrow.svg" alt="Submit button" class="submit">
+              </button>
+            </div> -->
+            <form>
               <input
                 type="email"
                 id="email"
-                name="email"
                 placeholder="Email Address"
                 required
               />
-              <button type="submit">
+              <img
+                src="images/icon-error.svg"
+                alt="icon-error"
+                id="icon-error"
+              />
+              <button type="submit" onclick="validater()">
                 <img src="./images/icon-arrow.svg" />
               </button>
-              <div class="error-message" id="errorMessage"></div>
+              <p id="msg">Please provide a valid email!</p>
             </form>
           </div>
         </div>
       </div>
       <div class="right"></div>
     </section>
+    <script src="./script.js"></script>
   </body>
 </html>

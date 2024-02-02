@@ -59,12 +59,30 @@ body {
 }
 
 .left-text p {
-  color: var(--header1);
+  color: var(--btn);
   line-height: 1.5;
   font-size: 18px;
   font-weight: 400;
   margin: 40px auto;
   padding-right: 30px;
+}
+
+.form-wrap form {
+  position: relative;
+}
+
+#icon-error {
+  display: none;
+  position: absolute;
+  top: 12px;
+  right: 150px;
+}
+
+#msg {
+  display: none;
+  position: absolute;
+  top: 15px;
+  left: 22px;
 }
 
 input[type="email"] {
@@ -93,7 +111,7 @@ button {
   display: inline-block;
   position: absolute;
   top: 0px;
-  right: 15%;
+  right: 10%;
   background-image: var(--bg2);
   width: 90px;
   height: 48px;
@@ -108,7 +126,26 @@ button:hover {
   background: hsl(0, 80%, 86%);
   cursor: pointer;
 }
-
+@media (max-width: 1025px) {
+  button {
+    right: -45px;
+  }
+  #icon-error {
+    right: 50px;
+  }
+  .left {
+    padding: 40px 80px;
+  }
+  #msg {
+    font-size: inherit;
+    top: 16px;
+    left: 20px;
+    padding: 0;
+  }
+  input[type="email"] {
+    width: 100%;
+  }
+}
 @media (max-width: 750px) {
   .container {
     flex-direction: column;
@@ -139,7 +176,7 @@ button:hover {
     text-align: center;
     padding: 30px;
     margin: auto;
-
+    margin-bottom: 50px;
   }
 
   .left-text h1 {
@@ -157,8 +194,10 @@ button:hover {
   input[type="email"] {
     width: 100%;
   }
-
   button {
     right: 0%;
+  }
+  #icon-error {
+    right: 95px;
   }
 }
