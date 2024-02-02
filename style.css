@@ -9,8 +9,156 @@
 body {
   font-family: "Josefin Sans", sans-serif;
   font-size: 16px;
+  background-color: var(--bg1);
 }
 .container {
-display: grid;
-;
+  min-height: 100vh;
+  max-width: 100vw;
+  display: flex;
+}
+
+.bg-mobile {
+  display: none;
+}
+
+.left {
+  width: 60%;
+  background: url(./images/bg-pattern-desktop.svg) no-repeat center/center cover;
+  padding: 40px 120px;
+  margin: 0 auto;
+}
+
+.logo {
+  margin: 20px 0;
+}
+
+.left-text {
+  max-width: 450px;
+}
+
+.right {
+  background: url(./images/hero-desktop.jpg) no-repeat;
+  width: 40%;
+  background-size: cover;
+  background-position: center center;
+}
+
+.left-text h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 20px;
+  line-height: 1.2;
+  margin-top: 60px;
+  color: var(--header2);
+}
+
+.left-text h1 span {
+  color: var(--header1);
+  font-weight: 300;
+}
+
+.left-text p {
+  color: var(--header1);
+  line-height: 1.5;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 40px auto;
+  padding-right: 30px;
+}
+
+input[type="email"] {
+  padding: 15px 20px;
+  width: 80%;
+  border-radius: 50px;
+  border: 1px solid var(--header1);
+  background: transparent;
+}
+
+input:focus {
+  border: 2px solid var(--header1);
+  outline: none;
+}
+
+input::placeholder {
+  color: var(--header1);
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.form-wrap {
+  position: relative;
+}
+
+button {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  right: 15%;
+  background-image: var(--bg2);
+  width: 90px;
+  height: 48px;
+  padding: 15px;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+  box-shadow: 3px 3px 5px hsl(0, 0%, 50%, 0.5);
+}
+
+button:hover {
+  background: hsl(0, 80%, 86%);
+  cursor: pointer;
+}
+
+@media (max-width: 750px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .bg-mobile {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .left,
+  .right {
+    width: unset;
+  }
+
+  .left {
+    margin: auto 0;
+    padding: 0;
+  }
+
+  .logo {
+    margin: 30px;
+  }
+
+  .left-text {
+    text-align: center;
+    padding: 30px;
+    margin: auto;
+
+  }
+
+  .left-text h1 {
+    font-size: 2rem;
+    margin-top: 25px;
+    font-weight: 600;
+  }
+
+  .left-text p {
+    padding-right: 0px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  input[type="email"] {
+    width: 100%;
+  }
+
+  button {
+    right: 0%;
+  }
 }

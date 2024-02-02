@@ -14,38 +14,43 @@
   </head>
   <body>
     <section class="container">
-      <header>
-        <img src="./images/logo.svg" alt="logo" />
-      </header>
-      <div class="right">
-        <img src="./images/hero-desktop.jpg" alt="" />
-      </div>
       <div class="left">
-        <h1>
-          We're <br />
-          <span
-            >coming <br />
-            soon</span
-          >
-        </h1>
-        <p>
-          Hello fellow shoppers! We're currently building our new fashion store.
-          Add your email below to stay up-to-date with announcements and our
-          launch deals.
-        </p>
-        <form action="#">
-          <label for="Email"></label>
-          <input
-            type="email"
-            name="Email"
-            value=""
-            placeholder="Email Address"
-          />
-          <img src="./images/icon-error.svg" alt="" />
-          <button type="submit"><img src="./images/icon-arrow.svg" /></button>
-          <p class="error-msg">Please provide a valid Email</p>
-        </form>
+        <nav>
+          <img class="logo" src="./images/logo.svg" alt="logo" />
+        </nav>
+        <img
+          class="bg-mobile"
+          src="./images/hero-mobile.jpg"
+          alt="Background Image"
+        />
+        <div class="left-text">
+          <h1>
+            <span>We're</span>
+            coming soon
+          </h1>
+          <p>
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.
+          </p>
+          <div class="form-wrap">
+            <form id="emailForm">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email Address"
+                required
+              />
+              <button type="submit">
+                <img src="./images/icon-arrow.svg" />
+              </button>
+              <div class="error-message" id="errorMessage"></div>
+            </form>
+          </div>
+        </div>
       </div>
+      <div class="right"></div>
     </section>
   </body>
 </html>
