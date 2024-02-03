@@ -14,16 +14,8 @@ function validater() {
     errorMsg.innerHTML = "Please provide a valid email!";
     errorImg.style.display = "block";
     input.style.border = "2px solid red";
-
-    // errorImg.style.opacity = "0";
-    // input.style.border = "";
   } else {
     errorMsg.style.display = "none";
     errorImg.style.display = "none";
-
-    // errorImg.style.opacity = "10";
-    // errorMsg.style.display = "block";
-    // input.style.border = "2px solid red";
-    // email.focus();
   }
 }
